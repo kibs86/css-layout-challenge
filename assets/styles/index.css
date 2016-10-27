@@ -1,0 +1,67 @@
+div {
+  border: 1px solid black;
+  height: 50px;
+  width: 10%;
+}
+
+.nav {
+  display: inline-block;
+}
+
+#box1 {
+  margin-left: 50px;
+}
+
+#box2 {
+  width: 50%;
+}
+
+#box4 {
+  margin-right: 50px;
+}
+
+#box5 {
+  position: relative;
+  width: 62%;
+  top: 50px;
+  left: 15%;
+}
+
+main {
+  position: relative;
+  top: 100px;
+}
+
+#box6 {
+  float: left;
+  padding-bottom: 200px;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  clear:left;
+  left: 15%;
+  width: 300px;
+  height: 400px;
+}
+
+#box7 {
+  display: inline-block;
+  width: 33%;
+}
+
+#box8 {
+  display: inline-block;
+  width: 33%;
+}
+
+#box9 {
+  display: inline-block;
+  width: 32%;
+}
+
+#box10 {
+  display: inline-block;
+  width: 100%;
+}
