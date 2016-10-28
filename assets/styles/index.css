@@ -1,67 +1,168 @@
-div {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Walter Turncoat', cursive;
+  box-sizing: border-box;
+}
+
+input {
+  margin: 5px;
+}
+
+h1 {
+  font-family: 'Walter Turncoat', cursive;
+  font-size: 2em;
+}
+
+h2 {
+  display: inline;
+  font-size: 1.5em;
+}
+
+.white {
+  color: rgb(208, 211, 212);
+}
+
+.new-game, .login {
+  border-radius: 28px;
+  font-size: 1em;
+  font-family: "Walter Turncoat", cursive;
+}
+
+.small-img {
+  height: 60px;
+  width: 50px;
+  margin-top: 25px;
+  margin-right: 10px;
+}
+
+.title {
+  flex: 50%;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+/* div {
   border: 1px solid black;
-  height: 50px;
-  width: 10%;
-}
+} */
 
-.nav {
-  display: inline-block;
-}
-
-#box1 {
-  margin-left: 50px;
-}
-
-#box2 {
-  width: 50%;
-}
-
-#box4 {
-  margin-right: 50px;
-}
-
-#box5 {
-  position: relative;
-  width: 62%;
-  top: 50px;
-  left: 15%;
-}
-
-main {
-  position: relative;
-  top: 100px;
-}
-
-#box6 {
-  float: left;
-  padding-bottom: 200px;
-}
-
-.container {
-  position: relative;
-  display: inline-block;
-  clear:left;
-  left: 15%;
-  width: 300px;
-  height: 400px;
-}
-
-#box7 {
-  display: inline-block;
-  width: 33%;
-}
-
-#box8 {
-  display: inline-block;
-  width: 33%;
-}
-
-#box9 {
-  display: inline-block;
-  width: 32%;
-}
-
-#box10 {
-  display: inline-block;
+.board {
+  display: flex;
+  height: 100%;
   width: 100%;
+  flex-flow: row wrap;
+  flex: 0 0 350px;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display:flex;
+  flex: 0 0 320px;
+  height: 40%;
+  width: 100%;
+  align-items: center;
+}
+
+.board-item {
+  flex: 0 0 100px;
+  height: 100px;
+  /*background: rgba(222, 231, 156, .3); */
+}
+
+.b3, .b4, .b5, .b6, .b7, .b8 {
+  border-top: 2px dotted black;
+}
+
+.b0, .b1, .b3, .b4, .b6, .b7 {
+  border-right: 2px dotted black;
+}
+
+.b0, .b1, .b2, .b3, .b4, .b5 {
+  border-bottom: 2px dotted black;
+}
+
+.b1, .b2, .b4, .b5, .b7, .b8 {
+  border-left: 2px dotted black;
+}
+
+.header {
+  /* background: rgba(114, 140, 0, .6); */
+  background: url('../images/background.jpg'), no-repeat, fixed;
+  background-position: bottom;
+  opacity: .9;
+  display: flex;
+}
+
+.red {
+  color: rgba(193, 27, 23, .9);
+  font-size: 2em;
+}
+
+.footer {
+  background: rgba(193, 27, 23, .6);
+  /* background: rgba(114, 140, 0, .6); */
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  /* background: rgba(132, 139, 121, .4); */
+  /*background: rgba(222, 231, 156, .7); */
+  background: rgba(114, 140, 0, .3);
+  height: 50%;
+}
+
+.aside-1 {
+  /* background: rgba(193, 154, 107, .5); */
+  background: rgba(132, 139, 121, .4);
+  flex: 0 1 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.aside-2 {
+  /* background: rgba(193, 154, 107, .5); */
+  background: rgba(132, 139, 121, .4);
+  flex: 0 1 100px;
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  padding: 2em;
 }
